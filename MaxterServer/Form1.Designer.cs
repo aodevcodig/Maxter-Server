@@ -30,14 +30,17 @@
         {
             spaceSeparatorVertical1 = new ReaLTaiizor.Controls.SpaceSeparatorVertical();
             metroPanel1 = new ReaLTaiizor.Controls.MetroPanel();
-            tbAppLogs = new RichTextBox();
-            foreverGroupBox1 = new ReaLTaiizor.Controls.ForeverGroupBox();
+            foxLabel1 = new ReaLTaiizor.Controls.FoxLabel();
+            badge1 = new ReaLTaiizor.Controls.Badge();
+            sbStatusBar = new ReaLTaiizor.Controls.ForeverStatusBar();
             tbAppLogs1 = new ReaLTaiizor.Controls.DungeonRichTextBox();
+            foreverGroupBox1 = new ReaLTaiizor.Controls.ForeverGroupBox();
+            tbAppLogs = new RichTextBox();
             dungeonHeaderLabel1 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             metroPanel2 = new ReaLTaiizor.Controls.MetroPanel();
             foxCheckBoxEdit3 = new ReaLTaiizor.Controls.FoxCheckBoxEdit();
             foxCheckBoxEdit2 = new ReaLTaiizor.Controls.FoxCheckBoxEdit();
-            foxCheckBoxEdit1 = new ReaLTaiizor.Controls.FoxCheckBoxEdit();
+            cbApache = new ReaLTaiizor.Controls.FoxCheckBoxEdit();
             metroPanel1.SuspendLayout();
             foreverGroupBox1.SuspendLayout();
             metroPanel2.SuspendLayout();
@@ -62,6 +65,9 @@
             metroPanel1.BackgroundColor = Color.White;
             metroPanel1.BorderColor = Color.FromArgb(150, 150, 150);
             metroPanel1.BorderThickness = 0;
+            metroPanel1.Controls.Add(foxLabel1);
+            metroPanel1.Controls.Add(badge1);
+            metroPanel1.Controls.Add(sbStatusBar);
             metroPanel1.Controls.Add(tbAppLogs1);
             metroPanel1.Controls.Add(foreverGroupBox1);
             metroPanel1.Controls.Add(dungeonHeaderLabel1);
@@ -78,13 +84,65 @@
             metroPanel1.ThemeAuthor = "Taiizor";
             metroPanel1.ThemeName = "MetroLight";
             // 
-            // tbAppLogs
+            // foxLabel1
             // 
-            tbAppLogs.Location = new Point(18, 41);
-            tbAppLogs.Name = "tbAppLogs";
-            tbAppLogs.Size = new Size(522, 58);
-            tbAppLogs.TabIndex = 6;
-            tbAppLogs.Text = "";
+            foxLabel1.BackColor = Color.Transparent;
+            foxLabel1.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            foxLabel1.ForeColor = Color.FromArgb(76, 88, 100);
+            foxLabel1.Location = new Point(50, 85);
+            foxLabel1.Name = "foxLabel1";
+            foxLabel1.Size = new Size(65, 19);
+            foxLabel1.TabIndex = 8;
+            foxLabel1.Text = "Apache";
+            // 
+            // badge1
+            // 
+            badge1.BGColorA = Color.FromArgb(197, 69, 68);
+            badge1.BGColorB = Color.FromArgb(176, 52, 52);
+            badge1.BorderColor = Color.FromArgb(205, 70, 66);
+            badge1.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            badge1.ForeColor = Color.FromArgb(255, 255, 253);
+            badge1.Location = new Point(414, 96);
+            badge1.Maximum = 9;
+            badge1.Name = "badge1";
+            badge1.Size = new Size(20, 20);
+            badge1.TabIndex = 7;
+            badge1.Text = "badge1";
+            badge1.Value = 0;
+            // 
+            // sbStatusBar
+            // 
+            sbStatusBar.BaseColor = Color.FromArgb(45, 47, 49);
+            sbStatusBar.Dock = DockStyle.Bottom;
+            sbStatusBar.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            sbStatusBar.ForeColor = Color.White;
+            sbStatusBar.Location = new Point(0, 388);
+            sbStatusBar.Name = "sbStatusBar";
+            sbStatusBar.RectColor = Color.FromArgb(128, 255, 255);
+            sbStatusBar.ShowTimeDate = false;
+            sbStatusBar.Size = new Size(754, 23);
+            sbStatusBar.TabIndex = 6;
+            sbStatusBar.Text = "Status: Offline";
+            sbStatusBar.TextColor = Color.White;
+            sbStatusBar.TimeColor = Color.White;
+            sbStatusBar.TimeFormat = "dd.MM.yyyy - HH:mm:ss";
+            // 
+            // tbAppLogs1
+            // 
+            tbAppLogs1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tbAppLogs1.AutoWordSelection = false;
+            tbAppLogs1.BackColor = Color.Transparent;
+            tbAppLogs1.BorderColor = Color.FromArgb(180, 180, 180);
+            tbAppLogs1.EdgeColor = Color.White;
+            tbAppLogs1.Font = new Font("Tahoma", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            tbAppLogs1.ForeColor = Color.FromArgb(76, 76, 76);
+            tbAppLogs1.Location = new Point(27, 71);
+            tbAppLogs1.Name = "tbAppLogs1";
+            tbAppLogs1.ReadOnly = false;
+            tbAppLogs1.Size = new Size(525, 62);
+            tbAppLogs1.TabIndex = 4;
+            tbAppLogs1.TextBackColor = Color.White;
+            tbAppLogs1.WordWrap = true;
             // 
             // foreverGroupBox1
             // 
@@ -103,22 +161,15 @@
             foreverGroupBox1.Text = "Registros da Aplicação";
             foreverGroupBox1.TextColor = Color.FromArgb(35, 168, 109);
             // 
-            // tbAppLogs1
+            // tbAppLogs
             // 
-            tbAppLogs1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tbAppLogs1.AutoWordSelection = false;
-            tbAppLogs1.BackColor = Color.Transparent;
-            tbAppLogs1.BorderColor = Color.FromArgb(180, 180, 180);
-            tbAppLogs1.EdgeColor = Color.White;
-            tbAppLogs1.Font = new Font("Tahoma", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            tbAppLogs1.ForeColor = Color.FromArgb(76, 76, 76);
-            tbAppLogs1.Location = new Point(12, 55);
-            tbAppLogs1.Name = "tbAppLogs1";
-            tbAppLogs1.ReadOnly = false;
-            tbAppLogs1.Size = new Size(525, 62);
-            tbAppLogs1.TabIndex = 4;
-            tbAppLogs1.TextBackColor = Color.White;
-            tbAppLogs1.WordWrap = true;
+            tbAppLogs.BorderStyle = BorderStyle.None;
+            tbAppLogs.Location = new Point(18, 41);
+            tbAppLogs.Name = "tbAppLogs";
+            tbAppLogs.ReadOnly = true;
+            tbAppLogs.Size = new Size(522, 58);
+            tbAppLogs.TabIndex = 6;
+            tbAppLogs.Text = "";
             // 
             // dungeonHeaderLabel1
             // 
@@ -140,7 +191,7 @@
             metroPanel2.BorderThickness = 0;
             metroPanel2.Controls.Add(foxCheckBoxEdit3);
             metroPanel2.Controls.Add(foxCheckBoxEdit2);
-            metroPanel2.Controls.Add(foxCheckBoxEdit1);
+            metroPanel2.Controls.Add(cbApache);
             metroPanel2.IsDerivedStyle = false;
             metroPanel2.Location = new Point(587, 71);
             metroPanel2.Name = "metroPanel2";
@@ -185,22 +236,23 @@
             foxCheckBoxEdit2.TabIndex = 6;
             foxCheckBoxEdit2.Text = "PHP";
             // 
-            // foxCheckBoxEdit1
+            // cbApache
             // 
-            foxCheckBoxEdit1.BackColor = Color.Transparent;
-            foxCheckBoxEdit1.BorderColor = Color.FromArgb(200, 200, 200);
-            foxCheckBoxEdit1.Checked = false;
-            foxCheckBoxEdit1.DisabledBorderColor = Color.FromArgb(230, 230, 230);
-            foxCheckBoxEdit1.DisabledTextColor = Color.FromArgb(166, 178, 190);
-            foxCheckBoxEdit1.EnabledCalc = true;
-            foxCheckBoxEdit1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            foxCheckBoxEdit1.ForeColor = Color.FromArgb(66, 78, 90);
-            foxCheckBoxEdit1.HoverBorderColor = Color.FromArgb(44, 156, 218);
-            foxCheckBoxEdit1.Location = new Point(3, 25);
-            foxCheckBoxEdit1.Name = "foxCheckBoxEdit1";
-            foxCheckBoxEdit1.Size = new Size(138, 21);
-            foxCheckBoxEdit1.TabIndex = 5;
-            foxCheckBoxEdit1.Text = "Apache";
+            cbApache.BackColor = Color.Transparent;
+            cbApache.BorderColor = Color.FromArgb(200, 200, 200);
+            cbApache.Checked = false;
+            cbApache.DisabledBorderColor = Color.FromArgb(230, 230, 230);
+            cbApache.DisabledTextColor = Color.FromArgb(166, 178, 190);
+            cbApache.EnabledCalc = true;
+            cbApache.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            cbApache.ForeColor = Color.FromArgb(66, 78, 90);
+            cbApache.HoverBorderColor = Color.FromArgb(44, 156, 218);
+            cbApache.Location = new Point(3, 25);
+            cbApache.Name = "cbApache";
+            cbApache.Size = new Size(138, 21);
+            cbApache.TabIndex = 5;
+            cbApache.Text = "Apache";
+            cbApache.CheckedChanged += cbApache_CheckedChanged;
             // 
             // Form1
             // 
@@ -228,9 +280,12 @@
         private ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel1;
         private ReaLTaiizor.Controls.FoxCheckBoxEdit foxCheckBoxEdit3;
         private ReaLTaiizor.Controls.FoxCheckBoxEdit foxCheckBoxEdit2;
-        private ReaLTaiizor.Controls.FoxCheckBoxEdit foxCheckBoxEdit1;
+        private ReaLTaiizor.Controls.FoxCheckBoxEdit cbApache;
         private ReaLTaiizor.Controls.ForeverGroupBox foreverGroupBox1;
         private ReaLTaiizor.Controls.DungeonRichTextBox tbAppLogs1;
         private RichTextBox tbAppLogs;
+        private ReaLTaiizor.Controls.ForeverStatusBar sbStatusBar;
+        private ReaLTaiizor.Controls.FoxLabel foxLabel1;
+        private ReaLTaiizor.Controls.Badge badge1;
     }
 }
